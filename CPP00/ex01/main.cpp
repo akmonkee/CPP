@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 15:20:42 by msisto            #+#    #+#             */
-/*   Updated: 2025/06/07 15:29:46 by msisto           ###   ########.fr       */
+/*   Updated: 2025/06/07 19:48:47 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	main(void)
 {
+	PhoneBook	book;
 	std::string	action;
 
 	while (action != "EXIT")
@@ -22,8 +23,8 @@ int	main(void)
 		if (!std::getline(std::cin, action))
 			break ;
 		if (action == "ADD")
-			std::cout << "ADD\n";
+			book.add();
 		if (action == "SEARCH")
-			std::cout << "SEARCH\n";
+			book.search();
 	}
 }
