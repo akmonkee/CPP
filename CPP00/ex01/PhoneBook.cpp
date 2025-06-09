@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 19:08:00 by msisto            #+#    #+#             */
-/*   Updated: 2025/06/07 22:05:00 by msisto           ###   ########.fr       */
+/*   Updated: 2025/06/09 14:30:31 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ PhoneBook::PhoneBook()
 
 void	PhoneBook::display(int nbr)
 {
-	std::cout<< this->contacts[nbr].GetFName();
-	std::cout<< this->contacts[nbr].GetLName();
-	std::cout<< this->contacts[nbr].GetNickname();
-	std::cout<< this->contacts[nbr].GetPhoneNumber();
-	std::cout<< this->contacts[nbr].GetDarkestSecret();
+	std::cout<< this->contacts[nbr].GetFName()<<std::endl;
+	std::cout<< this->contacts[nbr].GetLName()<<std::endl;
+	std::cout<< this->contacts[nbr].GetNickname()<<std::endl;
+	std::cout<< this->contacts[nbr].GetPhoneNumber()<<std::endl;
+	std::cout<< this->contacts[nbr].GetDarkestSecret()<<std::endl;
 }
 
 void	print_cell(std::string cell)
@@ -45,6 +45,7 @@ void	print_header()
 void	PhoneBook::search()
 {
 	int	contactNbr;
+	int	index;
 
 	if (this->isFull == true)
 		contactNbr = 8;
@@ -62,6 +63,12 @@ void	PhoneBook::search()
 		std::cout<<std::endl;
 	}
 	std::cout<< "---------------------------------------------"<<std::endl;
+	std::cout<< "input the index of the contact"<<std::endl;
+	std::cin>> index;
+	if (index >= 0 && index <= contactNbr - 1)
+		this->display(index);
+	else
+		std::cout<< "invalid index"<<std::endl;
 }
 
 int	PhoneBook::add()
