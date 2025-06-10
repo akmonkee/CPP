@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 19:08:00 by msisto            #+#    #+#             */
-/*   Updated: 2025/06/09 14:30:31 by msisto           ###   ########.fr       */
+/*   Updated: 2025/06/10 12:02:28 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,40 +74,23 @@ void	PhoneBook::search()
 int	PhoneBook::add()
 {
 	std::string	input;
+	std::string	lines[5] = {"input first name: ", "input last name: ", "input nickname: ", "input phone number: ", "input darkest secret: "};
 
 	for (int i = 0; i < 5; i++)
 	{
 		std::cout << "Contact " << this->cNbr << "\n" << std::endl;
+		std::cout<< lines[i];
+		std::cin >> input;
 		if (i == 0)
-		{
-			std::cout << "input first name: ";
-			std::cin >> input;
 			this->contacts[cNbr].SetFName(input);
-		}
 		else if (i == 1)
-		{
-			std::cout << "input last name: ";
-			std::cin >> input;
 			this->contacts[cNbr].SetLName(input);
-		}
 		else if (i == 2)
-		{
-			std::cout << "input nickname: ";
-			std::cin >> input;
 			this->contacts[cNbr].SetNickname(input);
-		}
 		else if (i == 3)
-		{
-			std::cout << "input phone number: ";
-			std::cin >> input;
 			this->contacts[cNbr].SetPhoneNumber(input);
-		}
 		else if (i == 4)
-		{
-			std::cout << "input darkest secret: ";
-			std::cin >> input;
 			this->contacts[cNbr].SetDarkestSecret(input);
-		}
 	}
 	if (this->cNbr < 7)
 		this->cNbr++;
