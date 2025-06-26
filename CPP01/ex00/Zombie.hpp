@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 12:54:39 by msisto            #+#    #+#             */
-/*   Updated: 2025/06/11 13:21:26 by msisto           ###   ########.fr       */
+/*   Updated: 2025/06/26 18:26:35 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ class	Zombie
 private:
 	std::string	name;
 public:
+	void announce();
 	Zombie(std::string zName);
 	~Zombie();
-	void announce();
 };
 
 Zombie* newZombie(std::string name);
