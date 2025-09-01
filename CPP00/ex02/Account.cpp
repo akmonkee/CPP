@@ -6,25 +6,28 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 11:37:29 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/01 14:15:25 by msisto           ###   ########.fr       */
+/*   Updated: 2025/09/01 15:01:14 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 
+int Account::_nbAccounts = 0;
+int Account::_totalAmount = 0;
+int Account::_totalNbDeposits = 0;
+int Account::_totalNbWithdrawals = 0;
+
 Account::Account( int initial_deposit)
 {
 	this->_accountIndex = _nbAccounts++;
-	this->amount = initial_deposit;
-	this->_nbAccounts = 0;
+	this->_amount = initial_deposit;
 	this->_nbWithdrawals = 0;
+	this->_nbDeposits = 0;
 
 	_totalAmount += initial_deposit;
-	_totalNbDeposits = 0;
-	_totalNbWithdrawals = 0;
 
 	_displayTimestamp();
-	std::cout<<"index:"<<this->_accountIndex<<";amount:"<<this->amout<<";created"<<std::endl;
+	std::cout<<"index:"<<this->_accountIndex<<";amount:"<<this->_amount<<";created"<<std::endl;
 }
 
 static int	Account::getNbAccounts( void )
