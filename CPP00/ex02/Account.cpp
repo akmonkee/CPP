@@ -6,11 +6,13 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/01 11:37:29 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/01 15:01:14 by msisto           ###   ########.fr       */
+/*   Updated: 2025/09/01 15:16:03 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
+#include <iostream>
+#include <ctime>
 
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
@@ -30,34 +32,34 @@ Account::Account( int initial_deposit)
 	std::cout<<"index:"<<this->_accountIndex<<";amount:"<<this->_amount<<";created"<<std::endl;
 }
 
-static int	Account::getNbAccounts( void )
+int	Account::getNbAccounts( void )
 {
-	this->_nbAccounts;
+	return _nbAccounts;
 }
 
-static int	Account::getTotalAmount( void )
+int	Account::getTotalAmount( void )
 {
-	this->_totalAmount;
+	return _totalAmount;
 }
 
-static int	Account::getNbDeposits( void )
+int	Account::getNbDeposits( void )
 {
-	this->_totalNbDeposits;
+	return _totalNbDeposits;
 }
 
-static int	Account::getNbWithdrawals( void )
+int	Account::getNbWithdrawals( void )
 {
-	this->_totalNbWithdrawals;
+	return _totalNbWithdrawals;
 }
 
-static void	Account::displayAccountsInfos( void )
+void	Account::displayAccountsInfos( void )
 {
-
+	_displayTimestamp();
+	std::cout<<"accounts:"<<getNbAccounts()<<";total:"<<getTotalAmount()<<";deposits:"<<getNbDeposits()<<";withdrawals:"<<getNbWithdrawals()<<std::endl;
 }
 
 void	Account::makeDeposit( int deposit )
 {
-[19920104_091532] index:0;p_amount:42;deposit:5;amount:47;nb_deposits:1
 	_displayTimestamp();
 	std::cout<<"index:"<<this->_accountIndex<<";p_amount:"<<this->_amount;
 	this->_amount = this->_amount + deposit;
@@ -67,7 +69,7 @@ void	Account::makeDeposit( int deposit )
 	std::cout<<";amount:"<<this->_amount<<";nb_deposits:"<<this->_nbDeposits<<std::endl;
 }
 
-bool	makeWithdrawal( int withdrawal )
+bool	Account::makeWithdrawal( int withdrawal )
 {
 	_displayTimestamp();
 	if (this->_amount < withdrawal)
