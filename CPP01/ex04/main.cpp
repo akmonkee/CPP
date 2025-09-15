@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/05 11:11:04 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/15 12:40:52 by msisto           ###   ########.fr       */
+/*   Updated: 2025/09/15 13:20:25 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,8 @@ int	main()
 					i = last_s;
 					while (line[i] == ' ')
 						i++;
-					line.replace(i, next_s - i, s2);
+					line.erase(i, next_s - i);
+					line.insert(i, s2);
 					next_s = i + s2.length();
 				}
 				k = 0;
