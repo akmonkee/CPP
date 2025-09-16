@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   mySed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/05 11:11:04 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/16 14:17:58 by msisto           ###   ########.fr       */
+/*   Created: 2025/09/16 11:18:44 by msisto            #+#    #+#             */
+/*   Updated: 2025/09/16 14:14:34 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"mySed.hpp"
+#pragma		once
+#include	<iostream>
+#include	<fstream>
 
-int	main()
+class	mySed
 {
-	mySed sedProc;
-
-	sedProc.fileProc();
-	return 0;
-}
+	private:
+		std::string	fileName;
+		std::string	s1;
+		std::string	s2;
+		std::ifstream	infile;
+		std::ofstream	outfile;
+	public:
+		mySed();
+		bool	infileCheck();
+		bool	outfileCheck();
+		int	firstWChar(std::string line, int last_s);
+		int		nextIcr(std::string line, int next_s, int type);
+		void	fileProc();
+		~mySed();
+};
