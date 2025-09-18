@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 13:49:26 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/18 11:14:04 by msisto           ###   ########.fr       */
+/*   Updated: 2025/09/18 11:32:16 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,20 @@ Fixed::Fixed()
 {
 	std::cout<<"Default constructor called\n";
 	this->value = 0;
+}
+
+Fixed& Fixed::FixedInt(int num)
+{
+	std::cout<<"Int constructor called\n";
+	this->valueInt = num;
+	return *this;
+}
+
+Fixed& Fixed::FixedFloat(int num)
+{
+	std::cout<<"Float constructor called\n";
+	this->valueFloat = num;
+	return *this;
 }
 
 Fixed::Fixed(const Fixed& val)
