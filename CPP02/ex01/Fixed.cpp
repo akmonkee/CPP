@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 13:49:26 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/18 14:07:44 by msisto           ###   ########.fr       */
+/*   Updated: 2025/09/18 14:16:41 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Fixed::Fixed(int num)
 Fixed::Fixed(float num)
 {
 	std::cout<<"Float constructor called\n";
-	value = num * (1 << fBits);
+	value = roundf(num * (1 << fBits));
 }
 
 Fixed::Fixed(const Fixed& val)
