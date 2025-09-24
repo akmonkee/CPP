@@ -6,11 +6,11 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:55:27 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/24 12:14:37 by msisto           ###   ########.fr       */
+/*   Updated: 2025/09/24 12:20:42 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Claptrap.hpp"
+#include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
 {
@@ -20,7 +20,7 @@ ClapTrap::ClapTrap()
 	this->attackDamage = 0;
 }
 
-ClapTrap::Claptrap(const ClapTrap& obj)
+ClapTrap::ClapTrap(const ClapTrap& obj)
 {
 	std::cout<<"Claptrap copy requested\n";
 	this->hitPoints = obj.hitPoints;
@@ -28,7 +28,7 @@ ClapTrap::Claptrap(const ClapTrap& obj)
 	this->attackDamage = obj.attackDamage;
 }
 
-ClapTrap&  ClapTrap::operator=(const ClapTrap& obj)
+ClapTrap&	ClapTrap::operator=(const ClapTrap& obj)
 {
 	std::cout<<"Claptrap backup requested\n";
 	this->hitPoints = obj.hitPoints;

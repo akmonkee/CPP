@@ -6,11 +6,11 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:55:04 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/24 12:15:28 by msisto           ###   ########.fr       */
+/*   Updated: 2025/09/24 12:17:14 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Claptrap.hpp"
+#include "ClapTrap.hpp"
 
 int	main()
 {
