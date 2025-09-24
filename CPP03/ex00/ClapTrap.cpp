@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:55:27 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/24 12:20:42 by msisto           ###   ########.fr       */
+/*   Updated: 2025/09/24 14:01:53 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,26 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& obj)
 	return *this;
 }
 
-//void	ClapTrap::attack(const std::string& target)
-//{
-//	//std::cout<<"ClapTrap"<< <name> <<"attacks"<< <target> <<", causing"<< <damage> << "points of damage!\n";
-//}
-//
-//void	ClapTrap::takeDamage(unsigned int amount)
-//{
-//
-//}
-//
-//void	ClapTrap::beRepaired(unsigned int amount)
-//{
-//
-//}
+void	ClapTrap::attack(const std::string& target)
+{
+	std::cout<<"ClapTrap attacks "<< target <<", causing "<< this->attackDamage << " points of damage!\n";
+	this->energyPoints--;
+}
+
+void	ClapTrap::takeDamage(unsigned int amount)
+{
+	std::cout<<"ClapTrap hit a wall and took "<<amount<<" damage\n";
+	this->hitPoints=- amount;
+}
+
+void	ClapTrap::beRepaired(unsigned int amount)
+{
+	std::cout<<"ClapTrap found some parts and healed "<<amount<<" hp\n";
+	this->hitPoints =+ amount;
+	this->energyPoints--;
+}
 
 ClapTrap::~ClapTrap()
 {
-	std::cout<<"Claptrap destroyed\n";
+	std::cout<<"Claptrap fell off the stairs\n";
 }
