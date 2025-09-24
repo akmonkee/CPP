@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 13:49:01 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/23 13:50:20 by msisto           ###   ########.fr       */
+/*   Updated: 2025/09/24 11:35:33 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ class	Fixed
 		Fixed(const Fixed& val);
 		Fixed& operator=(const Fixed& val);
 		Fixed operator*(const Fixed& val) const;
+		Fixed operator/(const Fixed& val) const;
+		Fixed operator+(const Fixed& val) const;
+		Fixed operator-(const Fixed& val) const;
 		Fixed& operator++();
 		Fixed operator++(int);
 		Fixed& operator--();
@@ -39,5 +42,13 @@ class	Fixed
 		static const Fixed&	max(const Fixed& a, const Fixed& b);
 		static Fixed&	min(Fixed& a, Fixed& b);
 		static const Fixed&	min(const Fixed& a, const Fixed& b);
+		static bool	max_eq(Fixed& a, Fixed& b);
+		static bool	max_eq(const Fixed& a, const Fixed& b);
+		static bool	min_eq(Fixed& a, Fixed& b);
+		static bool	min_eq(const Fixed& a, const Fixed& b);
+		static bool	equal(Fixed& a, Fixed& b);
+		static bool	equal(const Fixed& a, const Fixed& b);
+		static bool	different(Fixed& a, Fixed& b);
+		static bool	different(const Fixed& a, const Fixed& b);
 		~Fixed();
 };
