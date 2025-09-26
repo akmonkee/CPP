@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:55:27 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/26 13:48:41 by msisto           ###   ########.fr       */
+/*   Updated: 2025/09/26 14:10:14 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,4 +111,43 @@ void	ScavTrap::guardGate()
 ScavTrap::~ScavTrap()
 {
 	std::cout<<"Scavtrap fell off the stairs, he might be better but he has the same weakness\n";
+}
+
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
+{
+	std::cout<<"FragTrap created\n";
+	this->name = name;
+	this->hitPoints = 100;
+	this->energyPoints = 100;
+	this->attackDamage = 30;
+}
+
+FragTrap::FragTrap(const FragTrap& obj) : ClapTrap(obj)
+{
+	std::cout<<"FragTrap copy requested\n";
+	this->name = obj.name;
+	this->hitPoints = obj.hitPoints;
+	this->energyPoints = obj.energyPoints;
+	this->attackDamage = obj.attackDamage;
+}
+
+void	FragTrap::attack(const std::string& target)
+{
+	if (this->energyPoints != 0)
+	{
+		std::cout<<"FragTrap "<<this->name<<" lands an explosive attack on "<< target <<", causing a devastating "<< this->attackDamage << " points of damage!\n";
+		this->energyPoints--;
+	}
+	else
+		std::cout<<"FragTrap is too tired for that\n";
+}
+
+void	FragTrap::highFivesGuys()
+{
+	std::cout<<"give me a high five!\n";
+}
+
+FragTrap::~FragTrap()
+{
+	std::cout<<"FragTrap fell off the stairs, no claptrap can overcome the might of the stairs\n";
 }

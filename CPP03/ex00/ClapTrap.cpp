@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:55:27 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/24 14:01:53 by msisto           ###   ########.fr       */
+/*   Updated: 2025/09/25 11:36:43 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,13 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap& obj)
 
 void	ClapTrap::attack(const std::string& target)
 {
-	std::cout<<"ClapTrap attacks "<< target <<", causing "<< this->attackDamage << " points of damage!\n";
-	this->energyPoints--;
+	if (this->energyPoints != 0)
+	{
+		std::cout<<"attacks "<< target <<", causing "<< this->attackDamage << " points of damage!\n";
+		this->energyPoints--;
+	}
+	else
+		std::cout<<"ClapTrap is too tired for that\n";
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
@@ -51,9 +56,14 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	std::cout<<"ClapTrap found some parts and healed "<<amount<<" hp\n";
-	this->hitPoints =+ amount;
-	this->energyPoints--;
+	if (this->energyPoints != 0)
+	{
+		std::cout<<"ClapTrap found some parts and healed "<<amount<<" hp\n";
+		this->hitPoints =+ amount;
+		this->energyPoints--;
+	}
+	else
+		std::cout<<"ClapTrap is too tired for that\n";
 }
 
 ClapTrap::~ClapTrap()

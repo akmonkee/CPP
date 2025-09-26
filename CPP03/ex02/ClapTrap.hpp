@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:55:24 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/26 11:59:31 by msisto           ###   ########.fr       */
+/*   Updated: 2025/09/26 13:56:30 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,14 @@ class ScavTrap : public ClapTrap
 		void	guardGate();
 		~ScavTrap();
 };
+
+class FragTrap : public ClapTrap
+{
+	public:
+		FragTrap(std::string name);
+		FragTrap(const FragTrap& obj);
+		void	attack(const std::string& target);
+		void	highFivesGuys();
+		~FragTrap();
+};
+
