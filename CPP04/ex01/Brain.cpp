@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 11:52:48 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/06 12:03:47 by msisto           ###   ########.fr       */
+/*   Created: 2025/10/07 13:02:58 by msisto            #+#    #+#             */
+/*   Updated: 2025/10/07 14:05:42 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "animal.hpp"
+#include "Brain.hpp"
 
-int main()
+Brain::Brain()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	const WrongAnimal* k = new WrongCat();
+	;
+}
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	std::cout << k->getType() << " " << std::endl;
-
-	i->MakeSound();
-	j->MakeSound();
-	k->MakeSound();
-	meta->MakeSound();
-
-	return 0;
+Brain::~Brain()
+{
+	;
 }
