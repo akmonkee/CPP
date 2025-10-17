@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:53:02 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/17 12:21:01 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/17 12:54:32 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Animal::Animal()
 
 Animal::Animal(const Animal& obj)
 {
+	std::cout<<"Animal copy constructor\n";
 	this->type = obj.type;
 }
 
@@ -52,6 +53,7 @@ Cat::Cat() : Animal()
 
 Cat::Cat(const Cat& obj) : Animal(obj)
 {
+	std::cout<<"Cat copy constructor\n";
 	this->type = obj.type;
 }
 
@@ -80,6 +82,7 @@ Dog::Dog() : Animal()
 
 Dog::Dog(const Dog& obj) : Animal(obj)
 {
+	std::cout<<"Dog copy constructor\n";
 	this->type = obj.type;
 }
 

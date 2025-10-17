@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:55:01 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/17 12:22:09 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/17 12:55:54 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ WrongAnimal::WrongAnimal()
 
 WrongAnimal::WrongAnimal(const WrongAnimal& obj)
 {
+	std::cout<<"WrongAnimal copy constructor\n";
 	this->type = obj.type;
 }
 
@@ -52,6 +53,7 @@ WrongCat::WrongCat() : WrongAnimal()
 
 WrongCat::WrongCat(const WrongCat& obj) : WrongAnimal(obj)
 {
+	std::cout<<"WrongCat copy constructor\n";
 	this->type = obj.type;
 }
 
