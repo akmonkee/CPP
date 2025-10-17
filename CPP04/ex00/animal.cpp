@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:53:02 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/17 11:35:27 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/17 12:21:01 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Animal::Animal()
 {
+	std::cout<<"Animal constructor\n";
 	this->type = "Animal";
 }
 
@@ -40,11 +41,12 @@ std::string Animal::getType() const
 
 Animal::~Animal()
 {
-	;
+	std::cout<<"Animal destructor\n";
 }
 
 Cat::Cat() : Animal()
 {
+	std::cout<<"Cat constructor\n";
 	this->type = "Cat";
 }
 
@@ -66,12 +68,13 @@ void	Cat::MakeSound() const
 
 Cat::~Cat()
 {
-	;
+	std::cout<<"Cat destructor\n";
 }
 
 
 Dog::Dog() : Animal()
 {
+	std::cout<<"Dog constructor\n";
 	this->type = "Dog";
 }
 
@@ -93,5 +96,5 @@ void	Dog::MakeSound() const
 
 Dog::~Dog()
 {
-	;
+	std::cout<<"Dog destructor\n";
 }

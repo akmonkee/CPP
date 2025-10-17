@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:55:01 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/17 11:28:13 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/17 12:22:09 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 WrongAnimal::WrongAnimal()
 {
+	std::cout<<"WrongAnimal constructor\n";
 	this->type = "WrongAnimal";
 }
 
@@ -40,11 +41,12 @@ std::string WrongAnimal::getType() const
 
 WrongAnimal::~WrongAnimal()
 {
-	;
+	std::cout<<"WrongAnimal destructor\n";
 }
 
 WrongCat::WrongCat() : WrongAnimal()
 {
+	std::cout<<"WrongCat constructor\n";
 	this->type = "WrongCat";
 }
 
@@ -66,5 +68,5 @@ void	WrongCat::MakeSound() const
 
 WrongCat::~WrongCat()
 {
-	;
+	std::cout<<"WrongCat destructor\n";
 }
