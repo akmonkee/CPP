@@ -6,11 +6,12 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:52:48 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/06 12:03:47 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/17 11:41:53 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "animal.hpp"
+#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
 int main()
 {
@@ -27,6 +28,11 @@ int main()
 	j->MakeSound();
 	k->MakeSound();
 	meta->MakeSound();
+
+	delete i;
+	delete j;
+	delete k;
+	delete meta;
 
 	return 0;
 }

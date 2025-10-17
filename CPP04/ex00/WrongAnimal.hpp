@@ -1,46 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 11:53:08 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/17 11:41:16 by msisto           ###   ########.fr       */
+/*   Created: 2025/10/08 12:23:05 by msisto            #+#    #+#             */
+/*   Updated: 2025/10/17 11:42:16 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-class	Animal
+class	WrongAnimal
 {
 	protected:
 		std::string type;
 	public:
-		Animal();
-		Animal(const Animal& obj);
-		Animal&	operator=(const Animal& obj);
+		WrongAnimal();
+		WrongAnimal(const WrongAnimal& obj);
+		WrongAnimal&	operator=(const WrongAnimal& obj);
 		std::string	getType() const;
 		virtual void	MakeSound() const;
-		virtual ~Animal();
+		virtual ~WrongAnimal();
 };
 
-class	Cat : public Animal
+class	WrongCat : public WrongAnimal
 {
 	public:
-		Cat();
-		Cat(const Cat& obj);
-		Cat&	operator=(const Cat& obj);
+		WrongCat();
+		WrongCat(const WrongCat& obj);
+		WrongCat&	operator=(const WrongCat& obj);
 		void	MakeSound() const;
-		virtual ~Cat();
-};
-
-class	Dog : public Animal
-{
-	public:
-		Dog();
-		Dog(const Dog& obj);
-		Dog&	operator=(const Dog& obj);
-		void	MakeSound() const;
-		virtual ~Dog();
+		virtual ~WrongCat();
 };

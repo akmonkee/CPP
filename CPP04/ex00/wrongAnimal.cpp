@@ -6,11 +6,11 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:55:01 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/06 12:11:30 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/17 11:28:13 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal()
 {
@@ -30,7 +30,7 @@ WrongAnimal&	WrongAnimal::operator=(const WrongAnimal& obj)
 
 void	WrongAnimal::MakeSound() const
 {
-	std::cout<<"Bark\n";
+	;
 }
 
 std::string WrongAnimal::getType() const
@@ -57,6 +57,11 @@ WrongCat&	WrongCat::operator=(const WrongCat& obj)
 {
 	this->type = obj.type;
 	return *this;
+}
+
+void	WrongCat::MakeSound() const
+{
+	std::cout<<"Bark\n";
 }
 
 WrongCat::~WrongCat()
