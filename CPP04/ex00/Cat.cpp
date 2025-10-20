@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 12:23:05 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 13:15:43 by msisto           ###   ########.fr       */
+/*   Created: 2025/10/20 12:38:00 by msisto            #+#    #+#             */
+/*   Updated: 2025/10/20 13:08:20 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#ifndef WRONGANIMAL_H
-#define WRONGANIMAL_H
-#include <iostream>
+#include "Cat.hpp"
 
-class	WrongAnimal
+Cat::Cat() : Animal()
 {
-	protected:
-		std::string type;
-	public:
-		WrongAnimal();
-		WrongAnimal(const WrongAnimal& obj);
-		WrongAnimal&	operator=(const WrongAnimal& obj);
-		std::string	getType() const;
-		virtual void	MakeSound() const;
-		virtual ~WrongAnimal();
-};
+	std::cout<<"Cat constructor\n";
+	this->type = "Cat";
+}
 
-#endif
+Cat::Cat(const Cat& obj) : Animal(obj)
+{
+	this->type = obj.type;
+}
+
+Cat&	Cat::operator=(const Cat& obj)
+{
+	this->type = obj.type;
+	return *this;
+}
+
+void	Cat::MakeSound() const
+{
+	std::cout<<"Meow\n";
+}
+
+Cat::~Cat()
+{
+	std::cout<<"Cat destructor\n";
+}

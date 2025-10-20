@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 12:23:05 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 13:15:43 by msisto           ###   ########.fr       */
+/*   Created: 2025/10/20 12:39:36 by msisto            #+#    #+#             */
+/*   Updated: 2025/10/20 13:07:13 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#ifndef WRONGANIMAL_H
-#define WRONGANIMAL_H
-#include <iostream>
+#include "Dog.hpp"
 
-class	WrongAnimal
+Dog::Dog() : Animal()
 {
-	protected:
-		std::string type;
-	public:
-		WrongAnimal();
-		WrongAnimal(const WrongAnimal& obj);
-		WrongAnimal&	operator=(const WrongAnimal& obj);
-		std::string	getType() const;
-		virtual void	MakeSound() const;
-		virtual ~WrongAnimal();
-};
+	std::cout<<"Dog constructor\n";
+	this->type = "Dog";
+}
 
-#endif
+Dog::Dog(const Dog& obj) : Animal(obj)
+{
+	this->type = obj.type;
+}
+
+Dog&	Dog::operator=(const Dog& obj)
+{
+	this->type = obj.type;
+	return *this;
+}
+
+void	Dog::MakeSound() const
+{
+	std::cout<<"Bark\n";
+}
+
+Dog::~Dog()
+{
+	std::cout<<"Dog destructor\n";
+}
