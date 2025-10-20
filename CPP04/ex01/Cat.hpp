@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 13:01:54 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 12:43:08 by msisto           ###   ########.fr       */
+/*   Created: 2025/10/20 12:37:38 by msisto            #+#    #+#             */
+/*   Updated: 2025/10/20 13:28:32 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef BRAIN_H
-# define BRAIN_H
-#include <iostream>
+#ifndef CAT_H
+# define CAT_H
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class	Brain
+class	Cat : public Animal
 {
-	private:
-		std::string *Ideas;
 	public:
-		Brain();
-		Brain(const Brain& obj);
-		Brain&	operator=(const Brain& obj);
-		std::string *getIdeas() const;
-		void	setIdeas(const std::string *I);
-		~Brain();
+		Cat();
+		Cat(const Cat& obj);
+		Cat&	operator=(const Cat& obj);
+		void	MakeSound() const;
+		virtual ~Cat();
 };
 
 #endif
+

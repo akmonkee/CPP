@@ -1,42 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/29 11:52:48 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 13:26:35 by msisto           ###   ########.fr       */
+/*   Created: 2025/10/20 12:38:00 by msisto            #+#    #+#             */
+/*   Updated: 2025/10/20 12:52:06 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Brain.hpp"
-#include "Dog.hpp"
 #include "Cat.hpp"
 
-int main()
+Cat::Cat() : Animal()
 {
-	int	i = 0;
-	Animal* Animals[] = {new Dog, new Cat, new Dog, new Cat, new Dog, new Cat};
+	std::cout<<"Cat constructor\n";
+	this->type = "Cat";
+	this->B = new Brain();
+}
 
-	std::cout<<"----------------------------\n";
+Cat::Cat(const Cat& obj) : Animal(obj)
+{
+	this->type = obj.type;
+}
 
-	while (i != 6)
-	{
-		Animals[i]->MakeSound();
-		i++;
-	}
+Cat&	Cat::operator=(const Cat& obj)
+{
+	this->type = obj.type;
+	this->B = new Brain(*obj.B);
+	return *this;
+}
 
-	std::cout<<"----------------------------\n";
+void	Cat::MakeSound() const
+{
+	std::cout<<"Meow\n";
+}
 
-	i = 0;
-
-	while (i != 6)
-	{
-		delete Animals[i];
-		i++;
-	}
-
-	return 0;
+Cat::~Cat()
+{
+	std::cout<<"Cat destructor\n";
+	delete this->B;
 }

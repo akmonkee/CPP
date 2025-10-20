@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 13:01:54 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 12:43:08 by msisto           ###   ########.fr       */
+/*   Created: 2025/10/20 13:14:10 by msisto            #+#    #+#             */
+/*   Updated: 2025/10/20 13:15:46 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef BRAIN_H
-# define BRAIN_H
-#include <iostream>
+#ifndef WRONGCAT_H
+#define WRONGCAT_H
+#include "WrongAnimal.hpp"
 
-class	Brain
+class	WrongCat : public WrongAnimal
 {
-	private:
-		std::string *Ideas;
 	public:
-		Brain();
-		Brain(const Brain& obj);
-		Brain&	operator=(const Brain& obj);
-		std::string *getIdeas() const;
-		void	setIdeas(const std::string *I);
-		~Brain();
+		WrongCat();
+		WrongCat(const WrongCat& obj);
+		WrongCat&	operator=(const WrongCat& obj);
+		void	MakeSound() const;
+		virtual ~WrongCat();
 };
 
 #endif
