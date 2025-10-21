@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/24 11:55:04 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/21 15:00:30 by msisto           ###   ########.fr       */
+/*   Created: 2025/10/21 14:58:59 by msisto            #+#    #+#             */
+/*   Updated: 2025/10/21 15:03:24 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+#ifndef FRAGTRAP_H
+#define FRAGTRAP_H
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
 
-int	main()
+class FragTrap : public ClapTrap
 {
-	ClapTrap a = ClapTrap("Scrap");
-	ScavTrap b = ScavTrap("Chunk");
-	FragTrap c = FragTrap("Frag");
-	b.guardGate();
-	c.highFivesGuys();
-	a.attack("wall");
-	b.attack("wall");
-	c.attack("wall");
-}
+	public:
+		FragTrap(std::string name);
+		FragTrap(const FragTrap& obj);
+		FragTrap&	operator=(const FragTrap& obj);
+		void	attack(const std::string& target);
+		void	highFivesGuys();
+		~FragTrap();
+};
+
+#endif
