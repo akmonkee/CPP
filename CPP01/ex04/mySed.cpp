@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:21:50 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/22 13:57:21 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/22 14:19:52 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ void	MySed::fileProc()
 		int last_s = 0;
 		while (1)
 		{
+			if (line.length() == 0)
+				break ;
 			if (!line.empty() && line[line.length() - 1] != ' ')
 				line += ' ';
 			next_s = nextIcr(line, next_s, 0);
@@ -108,7 +110,8 @@ void	MySed::fileProc()
 			if (line[next_s] == '\0')
 				break ;
 		}
-		line.erase(line.length() - 1, 1);
+		if (line.length() != 0)
+			line.erase(line.length() - 1, 1);
 		if (this->outfile.is_open())
 			this->outfile<<line<<std::endl;
 		else
