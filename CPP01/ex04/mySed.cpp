@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mySed.cpp                                          :+:      :+:    :+:   */
+/*   MySed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:21:50 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/16 14:14:59 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/22 13:57:21 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"mySed.hpp"
+#include	"MySed.hpp"
 
-mySed::mySed()
+MySed::MySed()
 {
 	std::cout<<"input filename: ";
 	std::cin>>this->fileName;
@@ -26,7 +26,7 @@ mySed::mySed()
 		this->outfile.open((fileName + ".replace").c_str());
 }
 
-bool	mySed::infileCheck()
+bool	MySed::infileCheck()
 {
 	if (!this->infile)
 	{
@@ -36,7 +36,7 @@ bool	mySed::infileCheck()
 	return true;
 }
 
-bool	mySed::outfileCheck()
+bool	MySed::outfileCheck()
 {
 	if (!this->outfile)
 	{
@@ -46,7 +46,7 @@ bool	mySed::outfileCheck()
 	return true;
 }
 
-int	mySed::nextIcr(std::string line, int next_s, int type)
+int	MySed::nextIcr(std::string line, int next_s, int type)
 {
 	if (type == 0)
 	{
@@ -61,7 +61,7 @@ int	mySed::nextIcr(std::string line, int next_s, int type)
 	return next_s;
 }
 
-int	mySed::firstWChar(std::string line, int last_s)
+int	MySed::firstWChar(std::string line, int last_s)
 {
 	int	i;
 	i = last_s;
@@ -70,7 +70,7 @@ int	mySed::firstWChar(std::string line, int last_s)
 	return i;
 }
 
-void	mySed::fileProc()
+void	MySed::fileProc()
 {
 	if (infileCheck() == false || outfileCheck() == false)
 		return ;
@@ -117,7 +117,7 @@ void	mySed::fileProc()
 	this->outfile.close();
 }
 
-mySed::~mySed()
+MySed::~MySed()
 {
 	;
 }

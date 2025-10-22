@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mySed.hpp                                          :+:      :+:    :+:   */
+/*   MySed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:18:44 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/16 14:14:34 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/22 13:57:36 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include	<iostream>
 #include	<fstream>
 
-class	mySed
+class	MySed
 {
 	private:
 		std::string	fileName;
@@ -23,11 +23,11 @@ class	mySed
 		std::ifstream	infile;
 		std::ofstream	outfile;
 	public:
-		mySed();
+		MySed();
 		bool	infileCheck();
 		bool	outfileCheck();
 		int	firstWChar(std::string line, int last_s);
 		int		nextIcr(std::string line, int next_s, int type);
 		void	fileProc();
-		~mySed();
+		~MySed();
 };

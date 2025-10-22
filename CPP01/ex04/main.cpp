@@ -6,15 +6,15 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/05 11:11:04 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/16 14:17:58 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/22 13:57:58 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"mySed.hpp"
+#include	"MySed.hpp"
 
 int	main()
 {
-	mySed sedProc;
+	MySed sedProc;
 
 	sedProc.fileProc();
 	return 0;
