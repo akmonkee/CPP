@@ -1,51 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   harl.cpp                                           :+:      :+:    :+:   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 11:46:35 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/17 13:21:21 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/22 13:55:02 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"harl.hpp"
+#include	"Harl.hpp"
 
-harl::harl()
+Harl::Harl()
 {
 	;
 }
 
-void	harl::debug(void)
+void	Harl::debug(void)
 {
 	std::cout<<"I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!\n";
 }
 
-void	harl::info(void)
+void	Harl::info(void)
 {
 	std::cout<<"I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!\n";
 }
 
-void	harl::warning(void)
+void	Harl::warning(void)
 {
 	std::cout<<"I think I deserve to have some extra bacon for free. I’ve been coming for years, whereas you started working here just last month.\n";
 }
 
-void	harl::error(void)
+void	Harl::error(void)
 {
 	std::cout<<"This is unacceptable! I want to speak to the manager now.\n";
 }
 
-void	harl::complain(std::string level)
+void	Harl::complain(std::string level)
 {
-	typedef void (harl::*FuncPtr)();
+	typedef void (Harl::*FuncPtr)();
 
 	const FuncPtr table[4] = {
-		&harl::debug,
-		&harl::info,
-		&harl::warning,
-		&harl::error
+		&Harl::debug,
+		&Harl::info,
+		&Harl::warning,
+		&Harl::error
 	};
 
 	std::string lvls[4] = {
@@ -66,7 +66,7 @@ void	harl::complain(std::string level)
 	}
 }
 
-harl::~harl()
+Harl::~Harl()
 {
 	;
 }
