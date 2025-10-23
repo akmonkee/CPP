@@ -6,10 +6,12 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:55:24 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/16 12:20:46 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:32:14 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 #include <iostream>
 
 class	ClapTrap
@@ -33,3 +35,5 @@ class	ClapTrap
 		void	beRepaired(unsigned int amount);
 		~ClapTrap();
 };
+
+#endif

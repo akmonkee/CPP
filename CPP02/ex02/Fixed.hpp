@@ -6,10 +6,12 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 13:49:01 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/23 12:19:12 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:30:51 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FIXED_HPP
+#define FIXED_HPP
 #include <iostream>
 #include <cmath>
 
@@ -32,7 +34,6 @@ class	Fixed
 		Fixed operator++(int);
 		Fixed& operator--();
 		Fixed operator--(int);
-		friend std::ostream& operator<<(std::ostream& os, const Fixed& obj);
 		int getRawBits() const;
 		void setRawBits(int const raw);
 		int toInt( void ) const;
@@ -51,3 +52,7 @@ class	Fixed
 		static bool	different(const Fixed& a, const Fixed& b);
 		~Fixed();
 };
+
+std::ostream& operator<<(std::ostream& os, const Fixed& obj);
+
+#endif

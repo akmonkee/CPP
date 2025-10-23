@@ -6,10 +6,12 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 13:34:16 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/23 12:18:59 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:27:28 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 #include <iostream>
 #include "Weapon.hpp"
 
@@ -23,3 +25,5 @@ class	HumanA
 		void	attack();
 		~HumanA();
 };
+
+#endif

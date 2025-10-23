@@ -6,12 +6,12 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:14:10 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/23 12:19:35 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:33:39 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_H
-#define WRONGCAT_H
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 #include "WrongAnimal.hpp"
 
 class	WrongCat : public WrongAnimal

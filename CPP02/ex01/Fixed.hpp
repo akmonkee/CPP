@@ -6,10 +6,12 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 13:49:01 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/23 12:18:46 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:30:28 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FIXED_HPP
+#define FIXED_HPP
 #include <iostream>
 #include <cmath>
 
@@ -32,3 +34,5 @@ class	Fixed
 	};
 
 std::ostream& operator<<(std::ostream& os, const Fixed& obj);
+
+#endif

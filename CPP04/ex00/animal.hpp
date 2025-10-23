@@ -6,12 +6,12 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:53:08 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/23 12:19:25 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:33:03 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-# define ANIMAL_H
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 #include <iostream>
 
 class	Animal

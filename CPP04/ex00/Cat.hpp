@@ -6,12 +6,12 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:37:38 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/23 12:19:28 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:33:11 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_H
-# define CAT_H
+#ifndef CAT_HPP
+# define CAT_HPP
 #include "Animal.hpp"
 
 class	Cat : public Animal

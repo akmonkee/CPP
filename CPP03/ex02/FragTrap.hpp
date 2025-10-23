@@ -6,12 +6,12 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 14:58:59 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/23 12:19:21 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:32:45 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_H
-#define FRAGTRAP_H
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 #include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap

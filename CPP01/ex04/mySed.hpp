@@ -6,10 +6,12 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 11:18:44 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/23 12:19:06 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:28:34 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef MYSED_HPP
+#define MYSED_HPP
 #include	<iostream>
 #include	<fstream>
 
@@ -30,3 +32,5 @@ class	MySed
 		void	fileProc();
 		~MySed();
 };
+
+#endif

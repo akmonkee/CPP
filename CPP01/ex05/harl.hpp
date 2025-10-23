@@ -6,10 +6,12 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 11:46:31 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/23 12:19:08 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:28:53 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HARL_HPP
+#define HARL_HPP
 #include	<iostream>
 
 class	Harl
@@ -26,3 +28,4 @@ class	Harl
 		~Harl();
 };
 
+#endif
