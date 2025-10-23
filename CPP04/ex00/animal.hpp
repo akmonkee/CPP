@@ -1,15 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.hpp                                         :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:53:08 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/17 11:41:16 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:19:25 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ANIMAL_H
+# define ANIMAL_H
 #include <iostream>
 
 class	Animal
@@ -25,22 +27,4 @@ class	Animal
 		virtual ~Animal();
 };
 
-class	Cat : public Animal
-{
-	public:
-		Cat();
-		Cat(const Cat& obj);
-		Cat&	operator=(const Cat& obj);
-		void	MakeSound() const;
-		virtual ~Cat();
-};
-
-class	Dog : public Animal
-{
-	public:
-		Dog();
-		Dog(const Dog& obj);
-		Dog&	operator=(const Dog& obj);
-		void	MakeSound() const;
-		virtual ~Dog();
-};
+#endif

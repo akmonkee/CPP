@@ -6,11 +6,10 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 14:59:06 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/21 15:00:46 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:19:23 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 #ifndef SCAVTRAP_H
 #define SCAVTRAP_H
 #include "ClapTrap.hpp"

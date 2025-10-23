@@ -6,11 +6,10 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 13:49:01 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/24 11:35:33 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:19:12 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 #include <iostream>
 #include <cmath>
 

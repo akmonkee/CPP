@@ -6,11 +6,10 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 13:49:01 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/18 11:17:45 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:19:10 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 #include <iostream>
 
 class	Fixed

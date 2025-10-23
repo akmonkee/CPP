@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.cpp                                         :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:53:02 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/07 13:48:03 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/20 13:28:11 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Animal::Animal()
 {
+	std::cout<<"Animal constructor\n";
 	this->type = "Animal";
 }
 
@@ -28,69 +29,17 @@ Animal&	Animal::operator=(const Animal& obj)
 	return *this;
 }
 
-void	Animal::MakeSound() const
-{
-	if (this->getType() == "Cat")
-		std::cout<<"Meow\n";
-	else if (this->getType() == "Dog")
-		std::cout<<"Bark\n";
-}
-
 std::string Animal::getType() const
 {
 	return this->type;
 }
 
+void	Animal::MakeSound() const
+{
+	;
+}
+
 Animal::~Animal()
 {
-	delete B;
-}
-
-Cat::Cat() : Animal()
-{
-	this->type = "Cat";
-	this->B = new Brain();
-}
-
-Cat::Cat(const Cat& obj) : Animal(obj)
-{
-	this->type = obj.type;
-	this->B = obj.B;
-}
-
-Cat&	Cat::operator=(const Cat& obj)
-{
-	this->type = obj.type;
-	this->B = obj.B;
-	return *this;
-}
-
-Cat::~Cat()
-{
-	;
-}
-
-
-Dog::Dog() : Animal()
-{
-	this->type = "Dog";
-	this->B = new Brain();
-}
-
-Dog::Dog(const Dog& obj) : Animal(obj)
-{
-	this->type = obj.type;
-	this->B = obj.B;
-}
-
-Dog&	Dog::operator=(const Dog& obj)
-{
-	this->type = obj.type;
-	this->B = obj.B;
-	return *this;
-}
-
-Dog::~Dog()
-{
-	;
+	std::cout<<"Animal destructor\n";
 }

@@ -6,11 +6,10 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:55:24 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/21 15:00:52 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:19:19 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 #ifndef CLAPTRAP_H
 #define CLAPTRAP_H
 #include <iostream>

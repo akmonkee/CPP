@@ -6,11 +6,10 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 13:01:54 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 12:43:08 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:19:51 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 #ifndef BRAIN_H
 # define BRAIN_H
 #include <iostream>

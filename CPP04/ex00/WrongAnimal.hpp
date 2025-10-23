@@ -6,11 +6,10 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 12:23:05 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 13:15:43 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:19:33 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 #ifndef WRONGANIMAL_H
 #define WRONGANIMAL_H
 #include <iostream>

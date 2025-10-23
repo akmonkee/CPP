@@ -6,11 +6,10 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 13:34:37 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/05 10:54:31 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:19:02 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 #include <iostream>
 #include "Weapon.hpp"
 

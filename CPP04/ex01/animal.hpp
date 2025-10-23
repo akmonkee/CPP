@@ -1,15 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.hpp                                         :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:53:08 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/07 13:03:47 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/23 12:19:37 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ANIMAL_H
+# define ANIMAL_H
 #include <iostream>
 #include "Brain.hpp"
 
@@ -23,46 +25,9 @@ class	Animal
 		Animal(const Animal& obj);
 		Animal&	operator=(const Animal& obj);
 		std::string	getType() const;
-		void	MakeSound() const;
-		~Animal();
+		virtual void	MakeSound() const;
+		virtual ~Animal();
 };
 
-class	Cat : public Animal
-{
-	public:
-		Cat();
-		Cat(const Cat& obj);
-		Cat&	operator=(const Cat& obj);
-		~Cat();
-};
+#endif
 
-class	Dog : public Animal
-{
-	public:
-		Dog();
-		Dog(const Dog& obj);
-		Dog&	operator=(const Dog& obj);
-		~Dog();
-};
-
-class	WrongAnimal
-{
-	protected:
-		std::string type;
-	public:
-		WrongAnimal();
-		WrongAnimal(const WrongAnimal& obj);
-		WrongAnimal&	operator=(const WrongAnimal& obj);
-		std::string	getType() const;
-		void	MakeSound() const;
-		~WrongAnimal();
-};
-
-class	WrongCat : public WrongAnimal
-{
-	public:
-		WrongCat();
-		WrongCat(const WrongCat& obj);
-		WrongCat&	operator=(const WrongCat& obj);
-		~WrongCat();
-};
