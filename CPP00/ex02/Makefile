@@ -6,7 +6,7 @@
 #    By: msisto <msisto@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/01 11:33:09 by msisto            #+#    #+#              #
-#    Updated: 2025/10/27 12:23:04 by msisto           ###   ########.fr        #
+#    Updated: 2025/10/27 12:28:05 by msisto           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = c++
 
 FLAGS = -Wall -Werror -Wextra -std=c++98 -g
 
-SOURCE =  \
+SOURCE = Account.cpp main.cpp \
 
 OBJS = $(SOURCE:.cpp=.o)
 
