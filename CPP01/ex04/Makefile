@@ -6,17 +6,17 @@
 #    By: msisto <msisto@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/02 11:56:58 by msisto            #+#    #+#              #
-#    Updated: 2025/10/27 12:23:04 by msisto           ###   ########.fr        #
+#    Updated: 2025/10/27 12:32:25 by msisto           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = mySed
+NAME = MySed
 
 CC = c++
 
 FLAGS = -Wall -Werror -Wextra -std=c++98 -g
 
-SOURCE =  \
+SOURCE = MySed.cpp main.cpp \
 
 OBJS = $(SOURCE:.cpp=.o)
 
