@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 15:20:21 by msisto            #+#    #+#             */
-/*   Updated: 2025/06/07 21:40:49 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/28 12:51:26 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ public:
 	void	display(int nbr);
 	void	search();
 };
+
+int	phonecheck(std::string input);
 
 #endif

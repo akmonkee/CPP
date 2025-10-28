@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 19:08:00 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/22 12:07:12 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/28 12:52:27 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	PhoneBook::search()
 	std::cout<< "---------------------------------------------"<<std::endl;
 	std::cout<< "input the index of the contact"<<std::endl;
 	std::cin>> index;
-	if (index >= 0 && index <= contactNbr - 1)
+	if (index >= 0 && index <= this->cNbr)
 		this->display(index);
 	else
 		std::cout<< "invalid index"<<std::endl;
@@ -73,25 +73,39 @@ void	PhoneBook::search()
 
 int	PhoneBook::add()
 {
-	std::string	input;
+	std::string	fname;
+	std::string	lname;
+	std::string	nickname;
+	std::string	phonenbr;
+	std::string	secret;
 	std::string	lines[5] = {"input first name: ", "input last name: ", "input nickname: ", "input phone number: ", "input darkest secret: "};
 
 	for (int i = 0; i < 5; i++)
 	{
 		std::cout << "Contact " << this->cNbr << "\n" << std::endl;
 		std::cout<< lines[i];
-		std::cin >> input;
 		if (i == 0)
-			this->contacts[cNbr].SetFName(input);
+			std::cin >> fname;
 		else if (i == 1)
-			this->contacts[cNbr].SetLName(input);
+			std::cin >> lname;
 		else if (i == 2)
-			this->contacts[cNbr].SetNickname(input);
+			std::cin >> nickname;
 		else if (i == 3)
-			this->contacts[cNbr].SetPhoneNumber(input);
+		{
+			std::cin >> phonenbr;
+			if (phonenbr.size() != 10)
+				return 1;
+			if (phonecheck(phonenbr))
+				return 1;
+		}
 		else if (i == 4)
-			this->contacts[cNbr].SetDarkestSecret(input);
+			std::cin >> secret;
 	}
+	this->contacts[cNbr].SetFName(fname);
+	this->contacts[cNbr].SetLName(lname);
+	this->contacts[cNbr].SetNickname(nickname);
+	this->contacts[cNbr].SetPhoneNumber(phonenbr);
+	this->contacts[cNbr].SetDarkestSecret(secret);
 	if (this->cNbr < 7)
 		this->cNbr++;
 	else
@@ -100,4 +114,16 @@ int	PhoneBook::add()
 		this->isFull = true;
 	}
 	return (0);
+}
+
+int	phonecheck(std::string input)
+{
+	int i = 0;
+	while (i < 10)
+	{
+		if (!std::isdigit(static_cast<unsigned char>(input[i])))
+			return 1;
+		i++;
+	}
+	return 0;
 }
