@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 15:20:42 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/28 14:44:34 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/28 15:00:05 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	main(void)
 	while (1)
 	{
 		std::cout << "Action options:\nADD\nSEARCH\nEXIT\n";
-		std::cin >> action;
+		if (!(std::cin >> action))
+			break ;
 		if (action == "ADD")
 			book.add();
 		if (action == "SEARCH")

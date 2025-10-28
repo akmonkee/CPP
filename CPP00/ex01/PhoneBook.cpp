@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 19:08:00 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/28 14:44:06 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/28 14:54:27 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ void	PhoneBook::search()
 		std::cin.clear();
 		std::cin.ignore();
 		std::cout<< "invalid index"<<std::endl;
+		return ;
 	}
 	if (index >= 0 && index <= this->cNbr)
 		this->display(index);
