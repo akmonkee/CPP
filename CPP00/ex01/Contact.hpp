@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 15:20:10 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/28 12:19:51 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/28 13:49:57 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
-#include <cctype>
 
 class	Contact
 {

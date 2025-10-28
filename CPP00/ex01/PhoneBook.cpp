@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 19:08:00 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/28 13:05:29 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/28 13:53:39 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,7 @@ int	phonecheck(std::string input)
 	int i = 0;
 	while (i < 10)
 	{
-		if (!std::isdigit(static_cast<unsigned char>(input[i])))
+		if (input[i] > 57 || input[i] < 48)
 			return 1;
 		i++;
 	}
