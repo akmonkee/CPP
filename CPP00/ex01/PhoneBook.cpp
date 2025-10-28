@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 19:08:00 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/28 12:52:27 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/28 13:05:29 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,15 @@ int	PhoneBook::add()
 		{
 			std::cin >> phonenbr;
 			if (phonenbr.size() != 10)
+			{
+				std::cout<<"invalid input length\n";
 				return 1;
+			}
 			if (phonecheck(phonenbr))
+			{
+				std::cout<<"not a phone number\n";
 				return 1;
+			}
 		}
 		else if (i == 4)
 			std::cin >> secret;
