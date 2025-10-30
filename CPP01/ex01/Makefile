@@ -6,7 +6,7 @@
 #    By: msisto <msisto@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/04 11:50:32 by msisto            #+#    #+#              #
-#    Updated: 2025/10/27 12:30:48 by msisto           ###   ########.fr        #
+#    Updated: 2025/10/30 11:13:26 by msisto           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = c++
 
 FLAGS = -Wall -Werror -Wextra -std=c++98 -g
 
-SOURCE = Zombie.cpp main.cpp \
+SOURCE = Zombie.cpp zombieHorde.cpp main.cpp \
 
 OBJS = $(SOURCE:.cpp=.o)
 
