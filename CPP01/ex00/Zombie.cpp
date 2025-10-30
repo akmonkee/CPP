@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 12:59:35 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/30 11:07:37 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/30 15:52:18 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ Zombie::Zombie(std::string zName)
 
 Zombie::~Zombie()
 {
-	std::cout<< "deconstructed"<<std::endl;
+	std::cout<< this->name <<" deconstructed"<<std::endl;
 }
