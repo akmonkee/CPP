@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 13:32:53 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/30 11:50:56 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/30 13:45:46 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,18 @@
 int main()
 {
 	{
-		Weapon club = Weapon("hammer meant for bonking");
+		Weapon club = Weapon("crude spiked club");
 		HumanA bob("Bob", club);
 		bob.attack();
-		club.setType("normal hammer");
+		club.setType("some other type of club");
 		bob.attack();
 	}
 	{
-		Weapon club = Weapon("hammer meant for bonking");
-		Weapon sword = Weapon("sharp metal stick");
+		Weapon club = Weapon("crude spiked club");
 		HumanB jim("Jim");
-		jim.attack();
 		jim.setWeapon(club);
 		jim.attack();
-		jim.setWeapon(sword);
+		club.setType("some other type of club");
 		jim.attack();
 	}
 	return 0;
