@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/10 12:59:35 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/30 11:07:37 by msisto           ###   ########.fr       */
+/*   Created: 2025/10/30 11:05:11 by msisto            #+#    #+#             */
+/*   Updated: 2025/10/30 11:07:27 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-void	Zombie::announce()
+void	randomCump(std::string name)
 {
-	std::cout<< this->name << ": BraiiiiiiinnnzzzZ..."<<std::endl;
-}
-
-Zombie::Zombie(std::string zName)
-{
-	this->name = zName;
-}
-
-Zombie::~Zombie()
-{
-	std::cout<< "deconstructed"<<std::endl;
+	Zombie	randomZombie(name);
+	randomZombie.announce();
 }
