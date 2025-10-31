@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 13:49:26 by msisto            #+#    #+#             */
-/*   Updated: 2025/09/24 11:38:43 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/31 11:26:25 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,31 @@
 
 Fixed::Fixed()
 {
+	std::cout<< "\033[32m" <<"Default constructor called" << "\033[0m"<<std::endl;
 	this->setRawBits(0);
 }
 
 Fixed::Fixed(int num)
 {
+	std::cout<< "\033[36m" <<"Int constructor called" << "\033[0m"<<std::endl;
 	this->setRawBits(num << fBits);
 }
 
 Fixed::Fixed(float num)
 {
+	std::cout<< "\033[36m" <<"Float constructor called" << "\033[0m"<<std::endl;
 	this->setRawBits(roundf(num * (1 << fBits)));
 }
 
 Fixed::Fixed(const Fixed& val)
 {
+	std::cout<< "\033[33m" <<"Copy constructor called" << "\033[0m"<<std::endl;
 	this->setRawBits(val.getRawBits());
 }
 
 Fixed&	Fixed::operator=(const Fixed& val)
 {
+	std::cout<< "\033[34m" <<"Copy assignment operator called" << "\033[0m"<<std::endl;
 	this->setRawBits(val.getRawBits());
 	return *this;
 }
@@ -165,14 +170,6 @@ bool	Fixed::max_eq(const Fixed& a, const Fixed& b)
 	return false;
 }
 
-bool	Fixed::min_eq(Fixed& a, Fixed& b)
-{
-	std::cout<<a.toFloat()<<" <= "<<b.toFloat()<<" : ";
-	if (a.getRawBits() <= b.getRawBits())
-		return true;
-	return false;
-}
-
 bool	Fixed::min_eq(const Fixed& a, const Fixed& b)
 {
 	std::cout<<a.toFloat()<<" <= "<<b.toFloat()<<" : ";
@@ -215,5 +212,5 @@ bool	Fixed::different(const Fixed& a, const Fixed& b)
 
 Fixed::~Fixed()
 {
-	std::cout<<"Destructor called\n";
+	std::cout<< "\033[31m" <<"Destructor called" << "\033[0m"<<std::endl;
 }
