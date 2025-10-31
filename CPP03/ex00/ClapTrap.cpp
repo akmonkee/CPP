@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 11:55:27 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/16 13:26:14 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/31 14:21:42 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap()
 {
-	std::cout<<"Claptrap created\n";
+	std::cout<< "\033[32m" <<"Claptrap created\n" << "\033[0m";
 	setHitPoints(10);
 	setEnergyPoints(10);
 	setAttackDamage(0);
@@ -22,7 +22,7 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(const ClapTrap& obj)
 {
-	std::cout<<"Claptrap copy requested\n";
+	std::cout<< "\033[33m" <<"Claptrap copy requested\n" << "\033[0m";
 	setHitPoints(obj.getHitPoints());
 	setEnergyPoints(obj.getEnergyPoints());
 	setAttackDamage(obj.getAttackDamage());
@@ -30,7 +30,7 @@ ClapTrap::ClapTrap(const ClapTrap& obj)
 
 ClapTrap&	ClapTrap::operator=(const ClapTrap& obj)
 {
-	std::cout<<"Claptrap backup requested\n";
+	std::cout<< "\033[34m" <<"Claptrap backup requested\n" << "\033[0m";
 	setHitPoints(obj.getHitPoints());
 	setEnergyPoints(obj.getEnergyPoints());
 	setAttackDamage(obj.getAttackDamage());
@@ -99,5 +99,5 @@ void	ClapTrap::beRepaired(unsigned int amount)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout<<"Claptrap fell off the stairs\n";
+	std::cout<< "\033[31m" <<"Claptrap fell off the stairs\n" << "\033[0m";
 }

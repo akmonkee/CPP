@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 14:43:01 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/21 14:54:34 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/31 14:28:48 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	std::cout<<"Scavtrap created\n";
+	std::cout<< "\033[32m" <<"Scavtrap created\n" << "\033[0m";
 	setName(name);
 	setHitPoints(100);
 	setEnergyPoints(50);
@@ -23,7 +23,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 
 ScavTrap::ScavTrap(const ScavTrap& obj) : ClapTrap(obj)
 {
-	std::cout<<"ScavTrap copy requested\n";
+	std::cout<< "\033[33m" <<"Scavtrap copy requested\n" << "\033[0m";
 	setName(obj.getName());
 	setHitPoints(obj.getHitPoints());
 	setEnergyPoints(obj.getEnergyPoints());
@@ -32,7 +32,7 @@ ScavTrap::ScavTrap(const ScavTrap& obj) : ClapTrap(obj)
 
 ScavTrap&	ScavTrap::operator=(const ScavTrap& obj)
 {
-	std::cout<<"ScavTrap backup requested\n";
+	std::cout<< "\033[34m" <<"Scavtrap backup requested\n" << "\033[0m";
 	setName(obj.getName());
 	setHitPoints(obj.getHitPoints());
 	setEnergyPoints(obj.getEnergyPoints());
@@ -53,10 +53,10 @@ void	ScavTrap::attack(const std::string& target)
 
 void	ScavTrap::guardGate()
 {
-	std::cout<<getName()<<" is guarding a gate, no one will get past him\n";
+	std::cout<< "\033[36m" <<getName()<<" is guarding a gate, no one will get past him\n" << "\033[0m";
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout<<"Scavtrap fell off the stairs, he might be better but he has the same weakness\n";
+	std::cout<< "\033[31m" <<"Scavtrap fell off the stairs, he might be better but he has the same weakness\n" << "\033[0m";
 }

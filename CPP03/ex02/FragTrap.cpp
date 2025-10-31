@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 14:59:01 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/21 15:01:37 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/31 14:33:37 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	std::cout<<"FragTrap created\n";
+	std::cout<< "\033[32m" <<"FragTrap created\n" << "\033[0m";
 	setName(name);
 	setHitPoints(100);
 	setEnergyPoints(100);
@@ -23,7 +23,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 
 FragTrap::FragTrap(const FragTrap& obj) : ClapTrap(obj)
 {
-	std::cout<<"FragTrap copy requested\n";
+	std::cout<< "\033[33m" <<"FragTrap copy requested\n" << "\033[0m";
 	setName(obj.getName());
 	setHitPoints(obj.getHitPoints());
 	setEnergyPoints(obj.getEnergyPoints());
@@ -32,7 +32,7 @@ FragTrap::FragTrap(const FragTrap& obj) : ClapTrap(obj)
 
 FragTrap&	FragTrap::operator=(const FragTrap& obj)
 {
-	std::cout<<"FragTrap backup requested\n";
+	std::cout<< "\033[34m" <<"FragTrap backup requested\n" << "\033[0m";
 	setName(obj.getName());
 	setHitPoints(obj.getHitPoints());
 	setEnergyPoints(obj.getEnergyPoints());
@@ -53,10 +53,10 @@ void	FragTrap::attack(const std::string& target)
 
 void	FragTrap::highFivesGuys()
 {
-	std::cout<<"give me a high five!\n";
+	std::cout<< "\033[36m" <<"give me a high five!\n" << "\033[0m";
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout<<"FragTrap fell off the stairs, no claptrap can overcome the might of the stairs\n";
+	std::cout<< "\033[31m" <<"FragTrap fell off the stairs, no claptrap can overcome the might of the stairs\n" << "\033[0m";
 }
