@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 13:49:26 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/31 10:59:24 by msisto           ###   ########.fr       */
+/*   Updated: 2025/10/31 11:43:27 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Fixed::Fixed(const Fixed& val)
 {
 	std::cout<< "\033[33m" <<"Copy constructor called" << "\033[0m"<<std::endl;
 	this->setRawBits(val.getRawBits());
-} << "\033[0m"<<std::endl;
+}
 Fixed&	Fixed::operator=(const Fixed& val)
 {
 	std::cout<< "\033[34m" <<"Copy assignment operator called" << "\033[0m"<<std::endl;
