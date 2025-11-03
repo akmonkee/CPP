@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:55:01 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 13:16:37 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 12:09:36 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 WrongAnimal::WrongAnimal()
 {
-	std::cout<<"WrongAnimal constructor\n";
+	std::cout<< "\033[32m" << "WrongAnimal constructor\n" << "\033[0m";
 	this->type = "WrongAnimal";
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& obj)
 {
-	std::cout<<"WrongAnimal copy constructor\n";
+	std::cout<< "\033[33m" << "WrongAnimal copy constructor\n" << "\033[0m";
 	this->type = obj.type;
 }
 
@@ -42,5 +42,5 @@ std::string WrongAnimal::getType() const
 
 WrongAnimal::~WrongAnimal()
 {
-	std::cout<<"WrongAnimal destructor\n";
+	std::cout<< "\033[31m" << "WrongAnimal destructor\n" << "\033[0m";
 }

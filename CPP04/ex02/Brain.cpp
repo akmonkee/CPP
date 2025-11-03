@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 13:02:58 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 12:52:24 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 12:17:00 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 Brain::Brain()
 {
-	std::cout<<"creating brain\n";
+	std::cout<< "\033[32m" << "creating brain\n" << "\033[0m";
 	Ideas = new std::string[100];
 }
 
 Brain::Brain(const Brain& obj)
 {
-	std::cout<<"brain copy\n";
+	std::cout<< "\033[33m" << "brain copy\n" << "\033[0m";
 	int i = 0;
 	Ideas = new std::string[100];
 	while (i < 100)
@@ -32,7 +32,6 @@ Brain::Brain(const Brain& obj)
 
 Brain&	Brain::operator=(const Brain& obj)
 {
-	std::cout<<"brain = operator copy\n";
 	if (this != &obj)
 	{
 		int i = 0;
@@ -64,6 +63,6 @@ void	Brain::setIdeas(const std::string *I)
 
 Brain::~Brain()
 {
-	std::cout<<"deleting brain\n";
+	std::cout<< "\033[31m" << "deleting brain\n" << "\033[0m";
 	delete[] this->Ideas;
 }

@@ -6,20 +6,21 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:53:02 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 13:28:11 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 12:14:05 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "animal.hpp"
+#include "Animal.hpp"
 
 Animal::Animal()
 {
-	std::cout<<"Animal constructor\n";
+	std::cout<< "\033[32m" << "Animal constructor\n" << "\033[0m";
 	this->type = "Animal";
 }
 
 Animal::Animal(const Animal& obj)
 {
+	std::cout<< "\033[33m" << "Animal copy constructor\n" << "\033[0m";
 	this->type = obj.type;
 }
 
@@ -41,5 +42,5 @@ void	Animal::MakeSound() const
 
 Animal::~Animal()
 {
-	std::cout<<"Animal destructor\n";
+	std::cout<< "\033[31m" << "Animal destructor\n" << "\033[0m";
 }

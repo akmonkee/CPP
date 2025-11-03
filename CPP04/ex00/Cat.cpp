@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:38:00 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 13:08:20 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 12:07:34 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 Cat::Cat() : Animal()
 {
-	std::cout<<"Cat constructor\n";
+	std::cout<< "\033[32m" << "Cat constructor\n" << "\033[0m";
 	this->type = "Cat";
 }
 
 Cat::Cat(const Cat& obj) : Animal(obj)
 {
+	std::cout<< "\033[33m" << "Cat copy constructor\n" << "\033[0m";
 	this->type = obj.type;
 }
 
@@ -31,10 +32,10 @@ Cat&	Cat::operator=(const Cat& obj)
 
 void	Cat::MakeSound() const
 {
-	std::cout<<"Meow\n";
+	std::cout<< "\033[36m" << "Meow\n" << "\033[0m";
 }
 
 Cat::~Cat()
 {
-	std::cout<<"Cat destructor\n";
+	std::cout<< "\033[31m" << "Cat destructor\n" << "\033[0m";
 }

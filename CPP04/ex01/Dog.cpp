@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:39:36 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 13:26:04 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 12:12:42 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 Dog::Dog() : Animal()
 {
-	std::cout<<"Dog constructor\n";
+	std::cout<< "\033[32m" << "Dog constructor\n" << "\033[0m";
 	this->type = "Dog";
 	this->B = new Brain();
 }
 
 Dog::Dog(const Dog& obj) : Animal(obj)
 {
+	std::cout<< "\033[33m" << "Dog copy constructor\n" << "\033[0m";
 	this->type = obj.type;
 }
 
@@ -33,11 +34,11 @@ Dog&	Dog::operator=(const Dog& obj)
 
 void	Dog::MakeSound() const
 {
-	std::cout<<"Bark\n";
+	std::cout<< "\033[36m" << "Bark\n" << "\033[0m";
 }
 
 Dog::~Dog()
 {
-	std::cout<<"Dog destructor\n";
+	std::cout<< "\033[31m" << "Dog destructor\n" << "\033[0m";
 	delete this->B;
 }
