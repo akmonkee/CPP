@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 13:02:58 by msisto            #+#    #+#             */
-/*   Updated: 2025/11/03 12:15:05 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 12:24:45 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ Brain::Brain(const Brain& obj)
 
 Brain&	Brain::operator=(const Brain& obj)
 {
+	std::cout<< "\033[34m" << "Brain = operator\n" << "\033[0m";
 	if (this != &obj)
 	{
 		int i = 0;

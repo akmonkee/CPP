@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:39:36 by msisto            #+#    #+#             */
-/*   Updated: 2025/11/03 12:12:42 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 12:25:00 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ Dog::Dog(const Dog& obj) : Animal(obj)
 
 Dog&	Dog::operator=(const Dog& obj)
 {
+	std::cout<< "\033[34m" << "Dog = operator\n" << "\033[0m";
 	this->type = obj.type;
 	this->B = new Brain(*obj.B);
 	return *this;

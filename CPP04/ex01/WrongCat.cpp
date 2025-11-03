@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:13:45 by msisto            #+#    #+#             */
-/*   Updated: 2025/11/03 12:13:44 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 12:25:19 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ WrongCat::WrongCat(const WrongCat& obj) : WrongAnimal(obj)
 
 WrongCat&	WrongCat::operator=(const WrongCat& obj)
 {
+	std::cout<< "\033[34m" << "WrongCat = operator\n" << "\033[0m";
 	this->type = obj.type;
 	return *this;
 }
