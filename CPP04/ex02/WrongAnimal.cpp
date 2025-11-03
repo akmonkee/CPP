@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:55:01 by msisto            #+#    #+#             */
-/*   Updated: 2025/11/03 12:19:13 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 12:26:26 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ WrongAnimal::WrongAnimal(const WrongAnimal& obj)
 
 WrongAnimal&	WrongAnimal::operator=(const WrongAnimal& obj)
 {
+	std::cout<< "\033[34m" << "WrongAnimal = operator\n" << "\033[0m";
 	this->type = obj.type;
 	return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:53:02 by msisto            #+#    #+#             */
-/*   Updated: 2025/11/03 12:19:21 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 12:25:49 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Animal::Animal(const Animal& obj)
 
 Animal&	Animal::operator=(const Animal& obj)
 {
+	std::cout<< "\033[34m" << "Animal = operator\n" << "\033[0m";
 	this->type = obj.type;
 	return *this;
 }
