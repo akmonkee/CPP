@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:52:48 by msisto            #+#    #+#             */
-/*   Updated: 2025/11/03 13:17:05 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 13:51:37 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,15 @@
 
 int main()
 {
+	//Animal* animal = new Animal();
 	Animal* cat = new Cat();
+	Animal* dog = new Dog();
 
 	cat->MakeSound();
+	dog->MakeSound();
 
+	//delete animal;
 	delete cat;
+	delete dog;
 	return 0;
 }
