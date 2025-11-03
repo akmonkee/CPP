@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:38:00 by msisto            #+#    #+#             */
-/*   Updated: 2025/11/03 12:07:34 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 12:23:38 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Cat::Cat(const Cat& obj) : Animal(obj)
 
 Cat&	Cat::operator=(const Cat& obj)
 {
+	std::cout<< "\033[34m" << "Cat = operator\n" << "\033[0m";
 	this->type = obj.type;
 	return *this;
 }

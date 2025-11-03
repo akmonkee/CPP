@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:52:48 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/20 13:17:05 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/03 12:52:58 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,45 +19,32 @@
 int main()
 {
 	const Animal* meta = new Animal();
-	Animal cp = Animal();
-	Animal cp2 = cp;
-	Animal cp3 = Animal(cp2);
 
 	std::cout<<"---------------------------------------\n";
-	const Animal* j = new Dog();
-	Dog d1 = Dog();
-	Dog d2 = d1;
-	Dog d3 = Dog(d2);
+	const Animal* dog = new Dog();
 
 	std::cout<<"---------------------------------------\n";
-	const Animal* i = new Cat();
-	Cat c1 = Cat();
-	Cat c2 = c1;
-	Cat c3 = Cat(c2);
+	const Animal* cat = new Cat();
 
 	std::cout<<"---------------------------------------\n";
-	const WrongAnimal* k = new WrongCat();
-	WrongCat w1 = WrongCat();
-	WrongCat w2 = w1;
-	WrongCat w3 = WrongCat(w2);
+	const WrongAnimal* wrong = new WrongCat();
 
 	std::cout<<"---------------------------------------\n";
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	std::cout << k->getType() << " " << std::endl;
+	std::cout << dog->getType() << " " << std::endl;
+	std::cout << cat->getType() << " " << std::endl;
+	std::cout << wrong->getType() << " " << std::endl;
 	std::cout<<"---------------------------------------\n";
 
-	i->MakeSound();
-	j->MakeSound();
-	k->MakeSound();
 	meta->MakeSound();
+	dog->MakeSound();
+	cat->MakeSound();
+	wrong->MakeSound();
 	std::cout<<"---------------------------------------\n";
 
-	delete i;
-	delete j;
-	delete k;
 	delete meta;
-	std::cout<<"---------------------------------------\n";
+	delete dog;
+	delete cat;
+	delete wrong;
 
 	return 0;
 }
