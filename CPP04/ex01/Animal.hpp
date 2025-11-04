@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 11:53:08 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/23 12:33:52 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/04 11:48:23 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ class	Animal
 {
 	protected:
 		std::string type;
-		Brain* B;
 	public:
 		Animal();
 		Animal(const Animal& obj);

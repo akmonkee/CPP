@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:38:00 by msisto            #+#    #+#             */
-/*   Updated: 2025/11/03 12:24:53 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/04 11:49:55 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Cat::Cat(const Cat& obj) : Animal(obj)
 {
 	std::cout<< "\033[33m" << "Cat copy constructor\n" << "\033[0m";
 	this->type = obj.type;
+	this->B = new Brain(*obj.B);
 }
 
 Cat&	Cat::operator=(const Cat& obj)

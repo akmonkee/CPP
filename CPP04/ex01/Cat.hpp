@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:37:38 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/23 12:33:58 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/04 11:49:01 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 class	Cat : public Animal
 {
+	private:
+		Brain* B;
 	public:
 		Cat();
 		Cat(const Cat& obj);
