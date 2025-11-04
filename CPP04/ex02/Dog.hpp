@@ -6,7 +6,7 @@
 /*   By: msisto <msisto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:09:20 by msisto            #+#    #+#             */
-/*   Updated: 2025/10/23 12:34:31 by msisto           ###   ########.fr       */
+/*   Updated: 2025/11/04 11:54:28 by msisto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 class	Dog : public Animal
 {
+	private:
+		Brain* B;
 	public:
 		Dog();
 		Dog(const Dog& obj);
